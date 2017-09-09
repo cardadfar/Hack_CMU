@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.example.mwbecker.busbuddy.activity10">
+
+    <Button
+        android:id="@+id/nO"
+        android:layout_width="425dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="66dp"
+        android:layout_marginRight="-1dp"
+        android:background="@drawable/bg_buttonr"
+        android:fontFamily="sans-serif"
+        android:text="       No"
+        android:textColorLink="@color/redd"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yES"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <Button
+        android:id="@+id/yES"
+        android:layout_width="425dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="-2dp"
+        android:layout_marginRight="-9dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_button"
+        android:fontFamily="sans-serif"
+        android:text="       YES"
+        android:textColorLink="@android:color/holo_green_light"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.727" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/logo10"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-138dp" /><![CDATA[
+
+
+
+
+    app:layout_constraintTop_toTopOf="parent" />
+
+]]>
+</android.support.constraint.ConstraintLayout>
