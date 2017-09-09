@@ -83,7 +83,7 @@ public class Bus {
         return Stops.get(s).getVoided();
     }
 
-    public void updateCurrStop(int s) {
+    private void updateCurrStop(int s) {
         currStopInd = s;
         currStopStr = Stops.get(s).getName();
     }

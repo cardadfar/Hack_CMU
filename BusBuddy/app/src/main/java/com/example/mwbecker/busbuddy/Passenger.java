@@ -32,6 +32,11 @@ public class Passenger {
     public void setResponse(String b, boolean resp) {
         Buses.get(b).setResponse(resp);
     }
+    public void addBus(String b, int s) {
+        Bus B = BB[b]; //FIX for name
+        PassBus pb = new PassBus(b, B.getName(), s, B.getStopName(s));
+        Buses.put(b, pb);
+    }
     
     // Involves querying the actual database
     public int getCurrStopIndex(String b) {

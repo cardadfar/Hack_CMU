@@ -1,5 +1,6 @@
 package com.example.mwbecker.busbuddy;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.LinearLayout;
@@ -16,7 +17,7 @@ import java.util.HashMap;
 
 public class screen6 extends AppCompatActivity {
     // input
-    static String BID = "busID7";
+    static String BID = "busID";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,16 +26,16 @@ public class screen6 extends AppCompatActivity {
 
         // gets information from screen 4 (about the bus ID)
         Bundle bundle = getIntent().getExtras();
-        String busID = bundle.getString(BID);
+        final String busID = bundle.getString(BID);
+
+        // FIX BUS TO QUERY
+        final Bus bus = new Bus("", "", new String[0]);
 
         LinearLayout linear = (LinearLayout) findViewById(R.id.layout6);
         linear.setOrientation(LinearLayout.VERTICAL);
 
         // GET ARRAY OF STOPS FOR BUSES
         HashMap<Integer, CheckBox> ab = new HashMap<Integer, CheckBox>();
-
-        // FIX BUS TO QUERY
-        Bus bus = new Bus("", "", new String[0]);
 
         // make textView
         String busName = bus.getName();
@@ -52,6 +53,7 @@ public class screen6 extends AppCompatActivity {
         }
 
         for (Integer i : ab.keySet()) {
+            final Integer ind = i; // hack
             CheckBox b = ab.get(i);
 
             linear.addView(b);
@@ -60,12 +62,37 @@ public class screen6 extends AppCompatActivity {
             b.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (buttonView.isChecked()) {
-                        // SET TRACK TO STOP
-                        return;
+                        // where did the bus last go
+                        bus.setTaken(ind);
                     }
                 }
             });
             setContentView(linear);
         }
+
+        Button start = (Button) findViewById(R.id.startBtn6);
+        start.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bus.updateRouteTaken();
+            }
+        });
+        Button finish = (Button) findViewById(R.id.finBtn6);
+        finish.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bus.reset();
+            }
+        });
+
+        // goes back to page 1
+        Button back = (Button) findViewById(R.id.backBtn6);
+        back.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(screen6.this, screen4.class);
+                startActivity(intent);
+            }
+        });
     }
 }
