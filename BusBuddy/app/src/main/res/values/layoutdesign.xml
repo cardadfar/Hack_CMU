@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<Button
+    android:id="@+id/button"
+    android:layout_width="425dp"
+    android:layout_height="55dp"
+    android:layout_marginBottom="-2dp"
+    android:layout_marginRight="-1dp"
+    android:layout_marginTop="8dp"
+    android:background="@android:color/holo_green_light"
+    android:fontFamily="casual"
+    android:textColorLink="@android:color/holo_green_light"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+</resources>
+
