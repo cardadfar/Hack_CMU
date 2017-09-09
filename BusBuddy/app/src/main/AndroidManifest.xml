@@ -18,10 +18,19 @@
         </activity>
         <activity android:name=".secondscreen" />
         <activity android:name=".accountCreated" />
+<<<<<<< HEAD
         <activity android:name=".activity10" />
         <activity android:name=".busIDactivity8" />
         <activity android:name=".activity4" />
         <activity android:name=".activity5"></activity>
+=======
+        <activity android:name=".Screen4" />
+        <activity android:name=".screen5" />
+        <activity android:name=".screen6" />
+        <activity android:name=".screen7" />
+        <activity android:name=".screen8" />
+        <activity android:name=".screen9"></activity>
+>>>>>>> 3bdff66af13ba1c343cb9232b250212170db8905
     </application>
 
 </manifest>
