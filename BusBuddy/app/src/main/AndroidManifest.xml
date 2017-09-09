@@ -17,7 +17,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".secondscreen" />
-        <activity android:name=".accountCreated"></activity>
+        <activity android:name=".accountCreated" />
+        <activity android:name=".activity10" />
+        <activity android:name=".busIDactivity8" />
+        <activity android:name=".activity4" />
+        <activity android:name=".activity5"></activity>
     </application>
 
 </manifest>

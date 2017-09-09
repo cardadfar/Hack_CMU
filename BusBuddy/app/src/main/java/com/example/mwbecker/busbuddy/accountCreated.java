@@ -12,7 +12,14 @@ public class accountCreated extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account_created);
-        Button okayBtn = (Button) findViewById(R.id.okayBtn);
+        Button okayBtn = (Button) findViewById(R.id.nO);
+        okayBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent q = new Intent(accountCreated.this, activity10.class);
+                startActivity(q);
+            }
+        });
 
     }
 }

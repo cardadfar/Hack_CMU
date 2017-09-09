@@ -11,7 +11,7 @@ public class secondscreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_secondscreen);
-        Button okayBtn = (Button) findViewById(R.id.okayBtn);
+        Button okayBtn = (Button) findViewById(R.id.nO);
         okayBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

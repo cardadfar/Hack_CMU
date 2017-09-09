@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
-        Button newAccount1 = (Button) findViewById(R.id.okayBtn);
+        Button newAccount1 = (Button) findViewById(R.id.nO);
         newAccount1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
